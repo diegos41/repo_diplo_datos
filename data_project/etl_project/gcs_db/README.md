@@ -16,7 +16,7 @@ Finally, run the deployment from CLI:
 
 `prefect deployment run etl-web-to-gcs/etl_github`
 
-Before running the deployment, you can schedule the deployment from the UI or specify it from Command Line with something like this:
+Before running the deployment, you can also schedule it from the UI or specify it from Command Line with something like this:
 
 `prefect deployment build <script_name>:<flow_name> -n "deployment_name" --cron "0 5 1 * *" -a `
 
