@@ -1,6 +1,6 @@
-## ETL Pipelines (etl_project/)
+## ETL Pipelines (*etl_project/*)
 
-### ETL Pipeline A- Local DataBase (etl_project/local_db/)
+### ETL Pipeline A- Local DataBase (*etl_project/local_db/*)
 
 <picture>
 <source media= "(prefers-color-scheme: light)" srcset= "https://github.com/diegos41/repo_diplo_datos/blob/main/images/pipeline_etl_1.png">
@@ -17,7 +17,7 @@ Finalmente, se ejecutaron ciertas *SQL* queries para obtener información del da
 
 <br>
 
-### ETL Pipeline B- GCS Bucket (etl_project/gcs_db/)
+### ETL Pipeline B- GCS Bucket (*etl_project/gcs_db/*)
 
 <picture>
 <source media= "(prefers-color-scheme: light)" srcset= "https://github.com/diegos41/repo_diplo_datos/blob/main/images/pipeline_etl_2.png">
