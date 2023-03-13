@@ -37,9 +37,24 @@ También permite programar los deployments tanto desde la terminal como desde la
 
 Finalmente, el dataset es subido a un Bucket de *Google Cloud Storage*. En este caso, Prefect se encarga del manejo de la Google API ya que solo hay que agregar lo que le llaman *GcsBucket Block* al script y listo.
 
+<br>
+
 ## ELT Pipeline (*elt_project/*)
 
 <picture>
 <source media= "(prefers-color-scheme: light)" srcset= "https://github.com/diegos41/repo_diplo_datos/blob/main/images/pipeline_elt.png">
 <img alt= "This is the picture for elt pipeline.">
 </picture>
+
+En esta pipeline se crea primero la infraestructura necesaria para poder almacenar/procesar los datos en la nube *(Google CLoud Platform)*, utilizando *Terraform*. Las credenciales son reconocidas automáticamente gracias a la creación de una variable de entorno (descargar *Google SDK* previamente).
+
+Se realiza la ingestión de los datasets *yellow taxi data- 2019/2020* y *green taxi data- 2019/2020* mediante un script y utilizando el entorno local. Se hi8zo uso de la *Google API* para poder acceder al *Bucket* satisfactoriamente.
+
+Una vez cargados los datos en el *GCS Bucket*, se procede a crear dos *materialized tables* (una para cada servicio), con la ayuda de *BigQuery*. 
+
+Las tablas creadas sirven de *source tables* (ver ***schema.yml***) para la serie de transformaciones hechas en *dbt Cloud* (plataforma web). El objetivo final es la creación de una *fact table* uniendo los dos servicios. Se toma como inspiración el *Kimball's Dimensional Modelling*.
+En dbt se realiza la creación de dos *staging models*, uno para cada servicio, donde se 'castean' los tipos de datos a otros más adecuados según la columna en cuestión, entre otros ajustes. Todo esto es realizado con *SQL* queries. Finalmente, se crea una *fact table*, donde se efectúan *joins* con la [Taxi ZoneLookup Table](https://d37ci6vzurychx.cloudfront.net/misc/taxi+_zone_lookup.csv), para poder ver en detalle las zonas donde ocurren los ascensos/descensos de pasajeros, y no solamente observar *location ID's* que no proveen de mucha información a los stakeholders.
+
+Por último, se toma la *fact table* como recurso para crear un dashboard con *Google Looker Studio*, donde pueden observarse algunas tendencias interesantes (véase ***elt_project/results_dashboard.pdf***).
+
+
