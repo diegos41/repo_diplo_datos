@@ -22,4 +22,4 @@ docker run -it \
 
 Finally, run the desired queries using web UI on port 8080.
 
-- **Note**: [Taxi ZoneLookup Table](https://d37ci6vzurychx.cloudfront.net/misc/taxi+_zone_lookup.csv) is mandatory for doing joins in some queries (check *sql_queries/**doff_zone_largest_tip.sql*** ).
+- **Note**: [Taxi Zone Lookup Table](https://d37ci6vzurychx.cloudfront.net/misc/taxi+_zone_lookup.csv) is mandatory for doing joins in some queries (check *sql_queries/**doff_zone_largest_tip.sql*** ).

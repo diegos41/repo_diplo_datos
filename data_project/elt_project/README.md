@@ -22,7 +22,7 @@ Then, execute the script `web_to_gcs.py` locally.
 
 On *BigQuery*, create tables for each service type (yellow and green) that will be used as sources in dbt.
 
-Clone the ***dbt_production/*** directory into your repo if you're using dbt Cloud or download it if you're runind dbt locally. Once that's done, run `dbt build` in the CLI to build the project from scratch (includes models and all its dependencies).
+Clone the ***dbt_production/*** directory into your repo if you're using dbt Cloud or download it if you're running dbt locally. Once that's done, run `dbt build` in the CLI to build the project from scratch (includes models and all its dependencies).
 Check auto-generated documentation in a web page (really cool feature from dbt).
 
 Once the fact table `fact_trips` is created in *BQ*, use it as a source in *Looker Studio*. Finally, you can create some tiles for finding interesting insights. (See ***results_dashboard.pdf*** for checking the ones I've done)
