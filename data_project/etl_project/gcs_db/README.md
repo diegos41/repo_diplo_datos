@@ -3,6 +3,7 @@ Start Orion Server from CLI to check your Prefect UI:
 `prefect orion start`
 
 Make sure you find *for_fetching_purposes* folder for better understanding the process. Prefect will take the script from there and solve the API Managment for you. You do NOT need to download it.
+You can find the script in this folder also, for completion purposes only. But It will be fetched from the folder mentioned above.
 After adding *Github Block* from Prefect Orion UI, build a Docker image using `docker image build -t dieg0sc/prefect:hw .` 
 
 Then push the image using `docker image push dieg0sc/prefect:hw`. This is crucial since the *Docker Block* will take the image from DockerHub.
