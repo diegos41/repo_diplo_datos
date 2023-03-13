@@ -2,8 +2,6 @@
 
 - Nota: Parte del contenido de este directorio se encuentra en inglés debido a que mis principales fuentes de aprendizaje se encontraban en dicho idioma. Sin embargo, utilizo lenguaje estándar que es bastante conocido en la industria.
 
-## ETL Pipelines (*etl_project/*)
-
 ## ELT Pipeline (*elt_project/*)
 
 <picture>
@@ -23,6 +21,8 @@ En dbt se realiza la creación de dos *staging models*, uno para cada servicio, 
 Por último, se toma la *fact table* como recurso para crear un dashboard con *Google Looker Studio*, donde pueden observarse algunas tendencias interesantes (véase ***elt_project/results_dashboard.pdf***).
 
 <br>
+
+## ETL Pipelines (*etl_project/*)
 
 ### ETL Pipeline A- Local DataBase (*etl_project/local_db/*)
 
