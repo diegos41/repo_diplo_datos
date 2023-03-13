@@ -26,8 +26,9 @@ Los temas tratados fueron:
 - Manejo de archivos ***.JSON***. Creación de objetos en dicho formato.
 
 - ***HTML, CSS, Bootstrap***: en la carpeta */yoprogramo* se encuentran distintas prácticas que comprenden las partes elementales de una página web (esquema,etiquetas,estilos,encoding, metadata).
-El projecto de página web que realicé puede ubicarse en el path *yoprogramo/**projecto_web_page.html***, donde se puede observar la integración HTML-CSS.
-También probé las distintas clases y contenedores que provee *Bootstrap*. 
+
+    El projecto de página web que realicé puede ubicarse en el path *yoprogramo/**projecto_web_page.html***, donde se puede observar la integración HTML-CSS.
+    También probé las distintas clases y contenedores que provee *Bootstrap*. 
 
 - ***Javascript y Typescript***: Aplicación de todo lo aprendido de *Javascript* en la primera parte. 
 En el directorio */typescript* pueden hallarse las distintas pruebas realizadas con el lenguaje, como así también su traspilación a *.js* en la subcarpeta */output*.
