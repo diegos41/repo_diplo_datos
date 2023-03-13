@@ -2,6 +2,7 @@
 
 Este directorio comprende la realización de dos partes del programa *Argentina Programa* en 2022.
 
+<br>
 
 ### (I) SéProgramar 
 Lo visto durante este curso fue:
