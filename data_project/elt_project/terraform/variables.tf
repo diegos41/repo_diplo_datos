@@ -10,12 +10,12 @@ variable "project" {
 }
 
 variable "region" {
-    description = "Region for GCP resources. Choose as per your lcoation: https://cloud.google.com/about/locations"
+    description = "Region for GCP resources. Choose as per your location: https://cloud.google.com/about/locations"
     default = "southamerica-east1" #São-Paulo is the closest and most complete.
     type = string
 }
 
-#Other optional variables... (See Video 1.3.2)
+#Other optional variables... 
 
 variable "BQ_DATASET" {
     description = "BigQuery Dataset that raw data (from GCS) will be written into"
@@ -23,9 +23,3 @@ variable "BQ_DATASET" {
     default = "trips_data_all"
 }
 
-#this is not a resource in main.tf yet
-variable "TABLE_NAME" {
-    description = "BigQuery table"
-    type = string
-    default = "ny_trips"
-}
