@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+}
+header {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:grey;
+    height: 1cm;
+    padding: 5px 0 0 201px;
+}       
+nav {
+    background-color:grey;
+    height: 0cm;
+    padding: 0 0 0 200px;
+}
+main {
+    background-color:grey;
+    height: 2cm;
+    padding: 20px 0 100px 200px;
+}
+section {
+    margin: 0 200px;
+}
+#button {
+    font-size: 14px;
+    background-color: #e7e7e7;
+    border: 1px solid grey;
+    border-radius: 2px;
+    padding: 0px 4px;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+}
+footer p{
+    background-color:grey;
+    height: 1cm;
+    padding:0 200px;
+}
