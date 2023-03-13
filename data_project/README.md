@@ -37,3 +37,9 @@ También permite programar los deployments tanto desde la terminal como desde la
 
 Finalmente, el dataset es subido a un Bucket de *Google Cloud Storage*. En este caso, Prefect se encarga del manejo de la Google API ya que solo hay que agregar lo que le llaman *GcsBucket Block* al script y listo.
 
+## ELT Pipeline (*elt_project/*)
+
+<picture>
+<source media= "(prefers-color-scheme: light)" srcset= "https://github.com/diegos41/repo_diplo_datos/blob/main/images/pipeline_elt.png">
+<img alt= "This is the picture for elt pipeline.">
+</picture>
