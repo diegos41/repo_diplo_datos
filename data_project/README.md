@@ -52,7 +52,7 @@ Finalmente, se ejecutaron ciertas *SQL* queries para obtener información del da
 
 En este caso se extraerá el archivo *CSV* del mes de noviembre de 2020 para el servicio **green taxi**. 
 
-Es un excelente ejemplo de reproducibilidad y trabajo colaborativo, ya que el script es tomado desde un repositorio en *GitHub* y es ejecutado en un contenedor de Docker (usando una imagen de *DockerHub*), aislando por completo al computador local que se utilice y su rendimiento. 
+Es un excelente ejemplo de reproducibilidad y trabajo colaborativo, ya que el script es tomado desde un repositorio en *GitHub* y es ejecutado en un contenedor de Docker (usando una imagen de *DockerHub*), aislando por completo al computador local que se utilice. 
 
 Prefect se basa en Python y divide el proceso ETL en *Tasks* y *Flow*. Es bastante intuitivo y permite organizar cada procedimiento. 
 También permite programar los deployments tanto desde la terminal como desde la Prefect UI en el puerto 4200. Una vez que el deployment 'se activa', empieza a correr lo que se llama *Job*, donde se encuentra el script. 
