@@ -15,10 +15,12 @@ Se realiza la ingestión de los datasets *yellow taxi data- 2019/2020* y *green 
 
 Una vez cargados los datos en el *GCS Bucket*, se procede a crear dos *materialized tables* (una para cada servicio), con la ayuda de *BigQuery*. 
 
-Las tablas creadas sirven de *source tables* (ver ***schema.yml***) para la serie de transformaciones hechas en *dbt Cloud* (plataforma web). El objetivo final es la creación de una *fact table* uniendo los dos servicios. Se toma como inspiración el *Kimball's Dimensional Modelling*.
+Las tablas creadas sirven de *source tables* (ver ***schema.yml***) para la serie de transformaciones hechas en *dbt Cloud* (ver subfolder ***dbt_production/***). El objetivo final es la creación de una *fact table* uniendo los dos servicios. Se toma como inspiración el *Kimball's Dimensional Modelling*.
 En dbt se realiza la creación de dos *staging models*, uno para cada servicio, donde se 'castean' los tipos de datos a otros más adecuados según la columna en cuestión, entre otros ajustes. Todo esto es realizado con *SQL* queries. Finalmente, se crea una *fact table*, donde se efectúan *joins* con la [Taxi Zone Lookup Table](https://d37ci6vzurychx.cloudfront.net/misc/taxi+_zone_lookup.csv), para poder ver en detalle las zonas donde ocurren los ascensos/descensos de pasajeros, y no solamente observar *location ID's* que no proveen de mucha información a los stakeholders.
 
-Por último, se toma la *fact table* como recurso para crear un dashboard con *Google Looker Studio*, donde pueden observarse algunas tendencias interesantes (véase ***elt_project/results_dashboard.pdf***).
+Adicionalmente, se utiliza de nuevo *Taxi Zone Lookup Table*, pero esta vez junto con *fact_trips* para crear un *core model* que permitirá saber las ganancias mensuales de ambos servicios (diríjase a ***dm_monthly_zone_revenue.sql***).
+
+Por último, se toma la *fact table* (*fact_trips*) como recurso para crear un dashboard con *Google Looker Studio*, donde pueden observarse algunas tendencias interesantes (véase ***elt_project/results_dashboard.pdf***).
 
 <br>
 
