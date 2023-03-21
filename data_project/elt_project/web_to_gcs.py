@@ -13,7 +13,7 @@ Pre-reqs:
 
 # services = ['fhv','green','yellow']
 # switch out the bucketname
-BUCKET = os.environ.get("GCP_GCS_BUCKET", "dtc_data_lake_dtc-de-375600")
+BUCKET = os.environ.get("GCP_GCS_BUCKET", "data_buket_name")
 
 
 def upload_to_gcs(bucket, object_name, local_file):

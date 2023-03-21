@@ -2,7 +2,7 @@ version: 2
 
 sources: 
  - name: staging
-   database: dtc-de-375600
+   database: data_bucket_name
    schema: trips_data_all
 
    tables: 
@@ -10,7 +10,7 @@ sources:
     - name: yellow1_tripdata
   
  - name: hw_staging
-   database: dtc-de-375600
+   database: data_bucket_name
    schema: fhv_data
 
    tables:
