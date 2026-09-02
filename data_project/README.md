@@ -5,9 +5,11 @@
 ## ELT Pipeline (*elt_project/*)
 
 <picture>
-<source media= "(prefers-color-scheme: light)" srcset= "https://github.com/diegos41/repo_diplo_datos/blob/main/images/pipeline_elt.png">
-<img alt= "This is the picture for elt pipeline.">
+<source media= "(prefers-color-scheme: light)" srcset= "../images/pipeline_elt.png">
+<img alt= "This is the picture for elt pipeline." src="../images/pipeline_elt.png">
 </picture>
+
+&nbsp;
 
 En esta pipeline se crea primero la infraestructura necesaria para poder almacenar/procesar los datos en la nube *(Google Cloud Platform)*, utilizando *Terraform*. Las credenciales son reconocidas automáticamente gracias a la creación de una variable de entorno (descargar *Google SDK* previamente).
 
@@ -29,9 +31,11 @@ Por último, se toma la *fact table* (*fact_trips*) como recurso para crear un d
 ### ETL Pipeline A- Local DataBase (*etl_project/local_db/*)
 
 <picture>
-<source media= "(prefers-color-scheme: light)" srcset= "https://github.com/diegos41/repo_diplo_datos/blob/main/images/pipeline_etl_1.png">
-<img alt= "This is the picture for etl pipeline A.">
+<source media= "(prefers-color-scheme: light)" srcset= "../images/pipeline_etl_1.png">
+<img alt= "This is the picture for etl pipeline A." src= "../images/pipeline_etl_1.png">
 </picture>
+
+&nbsp;
 
 Esta pipeline ingiere el archivo *CSV* correspondiente al servicio **green taxi**, en el mes de enero de 2019.
 
@@ -46,9 +50,11 @@ Finalmente, se ejecutaron ciertas *SQL* queries para obtener información del da
 ### ETL Pipeline B- GCS Bucket (*etl_project/gcs_db/*)
 
 <picture>
-<source media= "(prefers-color-scheme: light)" srcset= "https://github.com/diegos41/repo_diplo_datos/blob/main/images/pipeline_etl_2.png">
-<img alt= "This is the picture for etl pipeline B.">
+<source media= "(prefers-color-scheme: light)" srcset= "../images/pipeline_etl_2.png">
+<img alt= "This is the picture for etl pipeline B." src= "../images/pipeline_etl_2.png">
 </picture>
+
+&nbsp;
 
 En este caso se extraerá el archivo *CSV* del mes de noviembre de 2020 para el servicio **green taxi**. 
 
